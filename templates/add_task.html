@@ -1,0 +1,15 @@
+<html>
+    <head><title>Add edit Form</title></head>
+    <form method="POST" name="add_editform" novalidate>
+        {% csrf_token %}
+        <table>
+            {% for field in todo_form %}
+                <tr><td>{{field.label}}</td><td>{{field}}</td><td></td>{{field.error}}</td></tr>
+            {% endfor %}
+            
+                <tr><td colspan="2"><input type="submit" value="submit"></td></tr>
+        </table>
+      
+
+    </form>
+</html>
